@@ -13,3 +13,9 @@ router.get('/', function (req, res, next) {
       articles: articles
     });
 });
+
+router.post('/', function(req, res, next){
+  console.log("Webhook received!");
+  console.log(req.body);
+  res.render('index', { title: 'WebHook Info' });
+});
