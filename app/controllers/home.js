@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
     });
 });
 
-router.post('/', function(req, res, next){
+router.post('/listener', function(req, res, next){
   console.log("Webhook received!");
   console.log(req.body);
   res.render('index', { title: 'WebHook Info' });
